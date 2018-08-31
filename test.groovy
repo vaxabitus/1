@@ -1,4 +1,3 @@
-pipeline {
     agent {
         // run with the custom python slave
         // will dynamically provision a new pod on APPUiO
@@ -28,4 +27,3 @@ pipeline {
         sleep 5
         }
     }
-}
