@@ -8,10 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Build"
-                def MYNAME = sh ( returnStdout: true, script: """
-                    docker images
-                """)
-                echo "my name: $MYNAME"
+                sh "docker images"
+                //echo "my name: $MYNAME"
             }
         }
         stage('Test') {
