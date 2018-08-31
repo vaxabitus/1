@@ -1,47 +1,37 @@
-pipeline{
+pipeline {
     agent {
         // run with the custom python slave
         // will dynamically provision a new pod on APPUiO
         label 'nodejs'
     }
-    stages{
+    stages {
         stage('Build') {
-            steps{
+            steps {
                 echo "Build"
-            }
-            steps{
                 sleep 5
             }
         }
         stage('Test') {
-            steps{
+            steps {
                 echo "Test"
-            }
-            steps{
                 sleep 2
             }
         }
         stage('DeployDev') {
-            steps{
+            steps {
                 echo "Deploy to Dev"
-            }
-            steps{
                 sleep 5
             }
         }
         stage('PromoteTest') {
-            steps{
+            steps {
                 echo "Deploy to Test"
-            }
-            steps{
                 sleep 5
             }
         }
         stage('PromoteProd') {
-            steps{
+            steps {
                 echo "Deploy to Prod"
-            }
-            steps{
                 sleep 5
             }
         }
