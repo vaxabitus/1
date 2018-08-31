@@ -4,7 +4,7 @@ pipeline {
         // will dynamically provision a new pod on APPUiO
         label 'nodejs'
     }
-    
+    node('nodejs') {
         stage('Build') {
             echo "Build"
         sleep 5
@@ -27,4 +27,5 @@ pipeline {
             echo "Deploy to Prod"
         sleep 5
         }
+    }
 }
