@@ -1,8 +1,8 @@
-    agent {
+    //agent {
         // run with the custom python slave
         // will dynamically provision a new pod on APPUiO
-        label 'nodejs'
-    }
+    //    label 'nodejs'
+    //}
     node('nodejs') {
         stage('Build') {
             echo "Build"
