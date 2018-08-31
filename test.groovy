@@ -27,5 +27,5 @@ pipeline{
             echo "Deploy to Prod"
         sleep 5
         }
-    }:
+    }
 }
