@@ -6,26 +6,44 @@ pipeline{
     }
     stages{
         stage('Build') {
-            echo "Build"
-        sleep 5
+            steps{
+                echo "Build"
+            }
+            steps{
+                sleep 5
+            }
         }
         stage('Test') {
-            echo "Test"
-        sleep 2
+            steps{
+                echo "Test"
+            }
+            steps{
+                sleep 2
+            }
         }
-    
-    
         stage('DeployDev') {
-            echo "Deploy to Dev"
-        sleep 5
+            steps{
+                echo "Deploy to Dev"
+            }
+            steps{
+                sleep 5
+            }
         }
         stage('PromoteTest') {
-            echo "Deploy to Test"
-        sleep 5
+            steps{
+                echo "Deploy to Test"
+            }
+            steps{
+                sleep 5
+            }
         }
         stage('PromoteProd') {
-            echo "Deploy to Prod"
-        sleep 5
+            steps{
+                echo "Deploy to Prod"
+            }
+            steps{
+                sleep 5
+            }
         }
     }
 }
